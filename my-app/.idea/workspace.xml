@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4f6f617-c13d-436d-84a6-e41f03854107" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Z9W2ruN1qR7sx8TYpC94Rb4cu0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\React\Projects\01-first-project\my-app\src" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4f6f617-c13d-436d-84a6-e41f03854107" name="Default Changelist" comment="" />
+      <created>1584251587614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584251587614</updated>
+      <workItem from="1584251598599" duration="3363000" />
+      <workItem from="1584322775040" duration="4948000" />
+      <workItem from="1584421432235" duration="821000" />
+      <workItem from="1584507960308" duration="2158000" />
+      <workItem from="1584541606128" duration="1008000" />
+      <workItem from="1584587970672" duration="7790000" />
+      <workItem from="1584896999553" duration="443000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="754" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584588481908">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="754" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1584588481908" />
+    <state x="667" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1584324816870">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="667" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1584324816870" />
+  </component>
+</project>
