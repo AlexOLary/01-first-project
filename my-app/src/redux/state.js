@@ -23,6 +23,11 @@ let state = {
             {id: 5, name: 'Vladimir'},
             {id: 6, name: 'Fiona'},
         ]
+    },
+    navbar: {
+        friendLogo: [
+
+        ]
     }
 
 }

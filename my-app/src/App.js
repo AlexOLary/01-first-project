@@ -8,6 +8,7 @@ import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import Dialogs from "./components/Dialogs/Dialogs";
 import Music from "./components/Music/Music";
+import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
     return (
@@ -23,6 +24,7 @@ const App = (props) => {
                     <Route path='/News' render={ () => <News/> }/>
                     <Route path='/Music' render={ () => <Music/>}/>
                     <Route path='/Settings' render={ () => <Settings/>}/>
+                    <Route path='/Friends' render={ () => <Friends props.state.friendLogo/>}/>
                 </div>
             </div>
         </BrowserRouter>);
