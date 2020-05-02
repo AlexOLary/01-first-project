@@ -12,7 +12,7 @@ import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
+
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
@@ -22,12 +22,12 @@ const App = (props) => {
                     <Route path='/Profile'
                            render={ () => <Profile state={props.state.profilePage}/>}/>
                     <Route path='/News' render={ () => <News/> }/>
-                    <Route path='/Music' render={ () => <Music/>}/>
+                    {/*<Route path='/Music' render={ () => <Music/>}/>
                     <Route path='/Settings' render={ () => <Settings/>}/>
-                    <Route path='/Friends' render={ () => <Friends props.state.friendLogo/>}/>
+                    <Route path='/Friends' render={ () => <Friends props.state.friendLogo/>}/>*/}
                 </div>
             </div>
-        </BrowserRouter>);
+        );
 }
 
 export default App;

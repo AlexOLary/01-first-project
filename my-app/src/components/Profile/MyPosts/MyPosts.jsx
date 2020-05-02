@@ -5,17 +5,24 @@ import Post from "./Post/Post";
 const MyPosts = (props) => {
 
     let posts_element =
-        props.posts.map(posts => <Post messege={posts.message} LikesCount={posts.likesCount}/>)
+        props.posts.map(posts => <Post messege={posts.message} LikesCount={posts.likesCount}/>);
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    }
 
     return (
         <div className={s.posts_block}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button>Add Post</button>
+                    <button onClick={addPost}>Add Post</button>
                 </div>
             </div>
             <div className={s.MyPost}>
