@@ -24,12 +24,5 @@ let state = {
             {id: 6, name: 'Fiona'},
         ]
     },
-    navbar: {
-        friendLogo: [
-
-        ]
-    }
-
-}
-
+};
 export default state;
