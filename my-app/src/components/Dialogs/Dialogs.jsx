@@ -30,7 +30,7 @@ const Dialogs = (props) => {
                 {messages_elements}
             </div>
             <div className={s.newTextMessage}>
-                <textarea ref={newMessageElement}></textarea>
+                <textarea ref={newMessageElement}/>
             </div>
             <div className={s.newMessageButton}>
                 <button onClick={addMessage}> AddPost </button>
