@@ -6,11 +6,10 @@ import Profile from "./components/Profile/Profile";
 import {Route} from "react-router-dom";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
-import Dialogs from "./components/Dialogs/Dialogs";
 import Music from "./components/Music/Music";
 import Friends from "./components/Friends/Friends";
-import {addPost} from "./redux/store";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import Users from "./components/Users/Users";
 
 const App = (props) => {
     return (
@@ -19,20 +18,17 @@ const App = (props) => {
             <Header/>
             <Navbar/>
             <div className='app-wrapper-content'>
-                <Route path='/Dialogs'
-                       render={() => <DialogsContainer />}/>
-
-                <Route path='/Profile'
-                       render={() => <Profile />}/>
-
-                <Route path='/News' render={() => <News/>}/>
-                {/*<Route path='/Music' render={ () => <Music/>}/>
-                    <Route path='/Settings' render={ () => <Settings/>}/>
-                    <Route path='/Friends' render={ () => <Friends props.state.friendLogo/>}/>*/}
+                <Route path='/dialogs' render={() => <DialogsContainer/>}/>
+                <Route path='/profile' render={() => <Profile/>}/>
+                <Route path='/news' render={() => <News/>}/>
+                <Route path='/music' render={() => <Music/>}/>
+                <Route path='/settings' render={() => <Settings/>}/>
+                <Route path='/friends' render={() => <Friends/>}/>
+                <Route path='/users' render={() => <Users/>}/>
             </div>
         </div>
-    );
-}
+    )
+};
 
 export default App;
 
