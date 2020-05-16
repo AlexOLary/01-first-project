@@ -9,19 +9,12 @@ const Dialogs = (props) => {
     let state = props.dialogsPage;
 
     let dialogs_elements = state.dialogs_data
-        .map(dialog => <Dialog_Item name={dialog.name} id={dialog.id}/>);
+        .map(d => <Dialog_Item name={d.name} id={d.id} key = {d.id}/>);
 
     let messages_elements = state.messages_data
-        .map(message => <Message message={message.message}/>);
+        .map(m => <Message message={m.message} key = {m.id}/>);
 
     let newMessageBody = state.newMessageBody;
-
-    let newMessageElement = React.createRef();
-
-    let addMessage = () => {
-        let text = newMessageElement.current.value;
-        alert(text);
-    };
 
     let onSendMessageClick = () => {
         props.sendMessage();
@@ -43,8 +36,11 @@ const Dialogs = (props) => {
                 <div>
                     <div><textarea value={newMessageBody}
                                    onChange={onNewMessageChange}
-                                   placeholder='Enter your message'></textarea></div>
-                    <div><button onClick={onSendMessageClick}>Send</button></div>
+                                   placeholder='Enter your message'/>
+                    </div>
+                    <div>
+                        <button onClick={onSendMessageClick}>Send</button>
+                    </div>
                 </div>
             </div>
         </div>);
