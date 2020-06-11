@@ -14,20 +14,13 @@ export const usersAPI = {
             .then(response => {
                 return response.data;
             });
-    }
+    },
+    follow(userId) {
+        return instance.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+    },
+
+    unfollow(userId) {
+        return instance.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+    },
 }
 
-
-/*export const getUsersUnFollow = (unFollow) => {
-    return instance.delete(`follow?page=${u.id}`)
-        .then(response => {
-            return response.data;
-        });
-}
-
-export const getUsersFollow = (follow) => {
-    return instance.post(`follow?page=${u.id}`)
-        .then(response => {
-            return response.data;
-        });
-}*/
