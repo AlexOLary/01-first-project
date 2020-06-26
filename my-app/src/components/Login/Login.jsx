@@ -7,14 +7,14 @@ const LoginForm = (props) => {
         <form onSubmit={props.handleSubmit}>
             <div>
                 {/*<label htmlFor="Login">Login</label>*/}
-                <Field placeholder={"Login"} name={"login"} component={"input"}/>
+                <Field placeholder="Login" name="login" component="input"/>
             </div>
             <div>
                 {/*<label htmlFor="Password">Password</label>*/}
-                <Field placeholder={"Password"} name={"password"} component={"input"}/>
+                <Field placeholder="Password" name="password" component="input"/>
             </div>
             <div>
-                <Field component={"input"} name={"rememberMe"} type={"checkbox"}/> remember me
+                <Field component="input" name="rememberMe" type="checkbox"/> remember me
             </div>
             <div>
                 <button>Login</button>
@@ -34,5 +34,7 @@ const Login = (props) => {
         <LoginReduxForm onSubmit={onSubmit}/>
     </div>
 }
+
+
 
 export default Login;
