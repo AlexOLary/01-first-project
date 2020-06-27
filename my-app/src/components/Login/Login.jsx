@@ -1,7 +1,5 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
-import { createForm } from 'final-form'
-import {validate} from "json-schema";
 
 const LoginForm = (props) => {
     return (
