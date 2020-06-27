@@ -1,6 +1,7 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
-
+import { createForm } from 'final-form'
+import {validate} from "json-schema";
 
 const LoginForm = (props) => {
     return (
@@ -36,5 +37,45 @@ const Login = (props) => {
 }
 
 
+
+/*// Create Form // Final Form
+const form = createForm({
+    initialValues,
+    onSubmit, // required
+    validate
+})
+
+// Subscribe to form state updates
+const unsubscribe = form.subscribe(
+    formState => {
+        // Update UI
+    },
+    { // FormSubscription: the list of values you want to be updated about
+        dirty: true,
+        valid: true,
+        values: true
+    }
+})
+
+// Subscribe to field state updates
+const unregisterField = form.registerField(
+    'username',
+    fieldState => {
+        // Update field UI
+        const { blur, change, focus, ...rest } = fieldState
+        // In addition to the values you subscribe to, field state also
+        // includes functions that your inputs need to update their state.
+    },
+    { // FieldSubscription: the list of values you want to be updated about
+        active: true,
+        dirty: true,
+        touched: true,
+        valid: true,
+        value: true
+    }
+)
+
+// Submit
+form.submit() // only submits if all validation passes*/
 
 export default Login;

@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "final-form": "^4.20.0",
     "formik": "^2.1.4",
+    "json-schema": "^0.2.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
