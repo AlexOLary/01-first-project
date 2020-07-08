@@ -55,7 +55,7 @@ const profileReducer = (state = initialState, action) => {
     }
 };
 
-export const addPost = (z) => ({type: ADD_POST});
+export const addPost = () => ({type: ADD_POST});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
 
