@@ -1,5 +1,4 @@
-import React from 'react';
-import s from './ProfileInfo.module.css';
+import React from "react";
 
 class ProfileStatus extends React.Component {
     state = {
@@ -8,47 +7,44 @@ class ProfileStatus extends React.Component {
     }
 
     activateEditMode = () => {
-        this.setState( {
+        this.setState({
             editMode: true
-        } );
+        })
     }
-    deactivateEditMode() {
-        this.setState( {
+    deactivateEditMode = () => {
+        this.setState({
             editMode: false
-        } );
+        })
         this.props.updateStatus(this.state.status);
     }
 
     onStatusChange = (e) => {
         this.setState({
             status: e.currentTarget.value
-        });
+        })
     }
 
-    componentDidUpdate(prevProps, prevState) {
-
+    componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.status !== this.props.status) {
             this.setState({
                 status: this.props.status
-            });
+            })
         }
-
-        console.log("componentDidUpdate")
     }
 
     render() {
-        console.log("render")
         return (
             <div>
                 {!this.state.editMode &&
-                <div>
-                    <span onDoubleClick={ this.activateEditMode }>{this.props.status || "-------"}</span>
-                </div>
+                    <div>
+                        <span onDoubleClick={this.activateEditMode}>{this.props.status}</span>
+                    </div>
                 }
                 {this.state.editMode &&
-                <div>
-                    <input onChange={this.onStatusChange} autoFocus={true} onBlur={ this.deactivateEditMode.bind(this) } value={this.state.status}/>
-                </div>
+                    <div>
+                        <input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode}
+                               value={this.state.status}/>
+                    </div>
                 }
             </div>
         )

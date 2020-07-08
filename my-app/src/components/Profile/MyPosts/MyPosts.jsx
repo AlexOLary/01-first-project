@@ -1,47 +1,41 @@
-import React from 'react';
-import s from './MyPosts.module.css';
-import Post from './Post/Post';
-import {Field, reduxForm} from "redux-form";
-import {maxLengthCreator, required} from "../../../utils/validators/validators";
-import {Textarea} from "../../common/FormsControls/FormsControls";
-
-const maxLength10 = maxLengthCreator(10);
-
-let AddNewPostForm = (props) => {
-    return <form onSubmit={props.handleSubmit}>
-        <div>
-            <Field name="newPostText" component={Textarea} placeholder={"Post message"}
-                   validate={[required, maxLength10]} />
-        </div>
-        <div>
-            <button>Add post</button>
-        </div>
-    </form>;
-}
-
-let AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm);
+import React from "react";
+import s from "./MyPosts.module.css";
+import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-    let postsElements =
-        props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>);
+
+    let posts_element =
+        props.posts.map(posts => <Post messege={posts.message} LikesCount={posts.likesCount}/>);
 
     let newPostElement = React.createRef();
 
-    let onAddPost = (values) => {
-        props.addPost(values.newPostText);
-    }
+    let onAddPost = () => {
+        props.addPost();
+    };
+
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    };
 
     return (
-        <div className={s.postsBlock}>
+        <div className={s.posts_block}>
             <h3>My posts</h3>
-            <AddNewPostFormRedux onSubmit={onAddPost} />
-            <div className={s.posts}>
-                {postsElements}
+            <div>
+                <div>
+                    <textarea onChange={onPostChange} ref={newPostElement}
+                              value={props.newPostText}
+                              placeholder = 'Enter your message' />
+                </div>
+                <div>
+                    <button onClick={onAddPost}>Add Post</button>
+                </div>
+            </div>
+            <div className={s.MyPost}>
+                { posts_element }
             </div>
         </div>
     )
 }
-
-
 
 export default MyPosts;
