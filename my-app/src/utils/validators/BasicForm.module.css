@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+.form-container {
+    display: grid;
+    grid-gap: 10px;
+}
+.field-error {
+    color: red;
+    font-size: 1.1em;
+}

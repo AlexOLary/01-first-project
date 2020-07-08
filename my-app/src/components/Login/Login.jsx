@@ -1,8 +1,12 @@
-import React from "react";
+import React from 'react';
+import BasicForm from "../../utils/validators/BasicForm";
 
 
-const Login = (props) => {
-    return <h1>LOGIN</h1>
-}
+const Login = () => (
+    <div>
+        <h1>LOGIN</h1>
+        <BasicForm/>
+    </div>
+);
 
 export default Login;
