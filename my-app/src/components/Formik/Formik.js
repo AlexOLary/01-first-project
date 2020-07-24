@@ -38,7 +38,7 @@ const Login = () => (
                         <ErrorMessage name="password" component="div" />
                     </div>
                     <div>
-                        <input type={"checkbox"}/>Remember me
+
                     </div>
                     <div>
                         <button type="submit" disabled={isSubmitting}>

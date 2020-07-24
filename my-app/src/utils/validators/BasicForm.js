@@ -37,8 +37,9 @@ const BasicForm = (props) => (
             //touched-поля формы, которые мы "затронули",
             //то есть, в которых что-то ввели
             render={({ errors, touched }) => (
-                <Form className="form-container">
-                    <label htmlFor="email">Email</label>
+                <Form onSubmit={props.handleSubmit} className="form-container">
+                    <div>
+                        <label htmlFor="email">Email</label>
                     <Field
                         name="email"
                         placeholder="email"
@@ -49,24 +50,36 @@ const BasicForm = (props) => (
                         //если это поле "затронуто, то выводим ошибку
                         errors.email &&
                         touched.email && <div className="field-error">{errors.email}</div>}
+                    </div>
+                    {/*<div>
+                        <label htmlFor="username">Username</label>
+                        <Field name="name" placeholder="name" type="text" />
 
-                    <label htmlFor="username">Username</label>
-                    <Field name="username" placeholder="username" type="text" />
+                        {errors.username &&
+                        touched.username && (
+                            <div className="field-error">{errors.username}</div>
+                        )}
+                    </div>*/}
+                    <div>
+                        <label htmlFor="password">Password</label>
+                        <Field name="password" placeholder="Password" type="password" />
 
-                    {errors.username &&
-                    touched.username && (
-                        <div className="field-error">{errors.username}</div>
-                    )}
+                        {errors.password &&
+                        touched.password && (
+                            <div className="field-error">{errors.password}</div>
+                        )}
+                    </div>
+                    <div>
+                        {/*<input name={"rememberMe"} type={"checkbox"}/>Remember me*/}
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
 
-                    <label htmlFor="password">Password</label>
-                    <Field name="password" placeholder="password" type="password" />
 
-                    {errors.password &&
-                    touched.password && (
-                        <div className="field-error">{errors.password}</div>
-                    )}
 
-                    <button type="submit">Submit</button>
+
+
                 </Form>
             )}
         />
