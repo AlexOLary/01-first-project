@@ -1,11 +1,10 @@
-import preLoader from "../../../assets/images/preLoader.gif";
-import React from "react";
-
+import React from 'react';
+import preloader from "../../../assets/images/preloader.svg";
 
 let Preloader = (props) => {
-   return <div>
-       <img src={preLoader}/>
-   </div>
-};
+    return <div  style={ { backgroundColor: 'white' } }>
+        <img src={preloader} />
+    </div>
+}
 
 export default Preloader;
