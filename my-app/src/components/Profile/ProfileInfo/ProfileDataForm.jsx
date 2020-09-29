@@ -3,11 +3,9 @@ import {Form} from "formik";
 import {createField, Input, Textarea} from "../../common/FormsControls/FormsControls";
 import {reduxForm} from "redux-form";
 
-const ProfileDataForm = ({profile}) => {
-    return <Form>
-        <div>
-            <button onClick={()=> {}}>save</button>
-        </div>}
+const ProfileDataForm = ({handleSubmit,profile}) => {
+    return <Form onSubmit={handleSubmit}>
+        <div><button>save</button></div>
         <div>
             <b>Full name</b>: {createField("Full Name","fullName", [], Input)}
         </div>
